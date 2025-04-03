@@ -1,0 +1,28 @@
+{
+    "name": "peartonlixiao/laravel-orm-tool",
+    "description": "laravel model\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000Eloquent ORM",
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "model",
+        "ORM"
+    ],
+    "authors": [
+        {
+            "name": "lxd",
+            "email": "pearton@126.com"
+        }
+    ],
+    "homepage": "https://justone.top/",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.2",
+        "laravel/framework": ">=6.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Peartonlixiao\\LaravelOrmTool\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
