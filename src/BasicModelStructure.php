@@ -337,7 +337,9 @@ trait BasicModelStructure
         }
         if(isset($params['where_custom_in']) && $params['where_custom_in']){
             foreach ($params['where_custom_in'] as $v){
-                $modelQuery = $modelQuery->whereIn($v[0],$v[1]);
+                if(!empty($v[0]) && !empty($v[1])){
+                    $modelQuery = $modelQuery->whereIn($v[0],$v[1]);
+                }
             }
         }
         if(isset($params['where_raw']) && $params['where_raw']){
@@ -351,7 +353,9 @@ trait BasicModelStructure
         }
         if(isset($params['order'])){
             foreach ($params['order'] as $v){
-                $modelQuery = $modelQuery->orderBy($v[0],$v[1]);
+                if(!empty($v[0]) && !empty($v[1])){
+                    $modelQuery = $modelQuery->orderBy($v[0],$v[1]);
+                }
             }
         }else{
             if(Schema::connection($_that->connection)->hasColumn(self::getTableName(),'sort')){
